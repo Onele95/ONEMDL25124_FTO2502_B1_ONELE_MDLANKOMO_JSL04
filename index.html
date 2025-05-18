@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kanban Board</title>
-    <link rel="stylesheet" href="style.css"> </head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="board-container">
-        <aside class="sidebar">
-            <h2>Kanban</h2>
-            <button id="launchCareerButton">Launch Career</button>     
-              <button id="Button">Theme</button>   
-        </aside>
+      <aside class="sidebar">
+        <h2>Kanban</h2>
+        <button id="launchCareerButton">Launch Career</button>
+        <button id="themeButton">Theme</button>
+        <button id="showSidebarButton">Hide Sidebar</button>
+      </aside>
+      <button id="showSidebarButton" class="show-sidebar-button">
+        Show Sidebar
+      </button>
 
-
-        <div id="createTaskButton ">
-<button id="createTaskButton">Create New Task</button>
+      <div class="kanban-board">
+        <button id="createTaskButton">Create New Task</button>
+        <div class="column" data-status="todo">
+          <h2>To Do</h2>
+          <div class="task-list"></div>
         </div>
-        
-        <div class="kanban-board">
-            <div class="column" data-status="todo">
-                <h2>To Do</h2>
-                <div class="task-list">
-                    </div>
-            </div>
-            <div class="column" data-status="doing">
-                <h2>In Progress</h2>
-                <div class="task-list">
-                    </div>
-            </div>
-            <div class="column" data-status="done">
-                <h2>Done</h2>
-                <div class="task-list">
-                    </div>
-            </div>
+        <div class="column" data-status="doing">
+          <h2>In Progress</h2>
+          <div class="task-list"></div>
         </div>
+        <div class="column" data-status="done">
+          <h2>Done</h2>
+          <div class="task-list"></div>
+        </div>
+      </div>
     </div>
 
     <div id="taskModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3>Task Details</h3>
-            <div id="taskDetails">
-                </div>
-            <div class="modal-actions">
-                <button id="saveChangesButton">Save Changes</button>
-                <button id="deleteTaskButton">Delete Task</button>
-            </div>
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3>Task Details</h3>
+        <div id="taskDetails"></div>
+        <div class="modal-actions">
+          <button id="saveChangesButton">Save Changes</button>
+          <button id="deleteTaskButton">Delete Task</button>
         </div>
+      </div>
     </div>
 
-    <script src="./initialData.js"></script> </body>
+    <script src="./initialData.js"></script>
+  </body>
 </html>
-
